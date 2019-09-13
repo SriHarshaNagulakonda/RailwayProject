@@ -1,0 +1,26 @@
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+<form action="{% url 'polls:insert_question' %}" method="post">
+    {% csrf_token %}
+    <table>
+        <tr>
+            <td>
+                <input type="text" name="question" placeholder="Question" required>
+            </td>
+        </tr>
+        <br>
+        <tr>
+        <td>
+            <input type="text" placeholder="Choice 1" name="choice1" required>
+        </td>
+        <td>
+            <input type="text" placeholder="Choice 2" name="choice2" required>
+        </td>
+        <td>
+            <input type="text" placeholder="Choice 3" name="choice3" required>
+        </td>
+        </tr>
+        <tr>
+        <td>
+        <input type="submit" name="submit" value="Submit">
+</form>

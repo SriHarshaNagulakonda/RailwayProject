@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add city</title>
+</head>
+<body>
+<form action="{% url 'railway:insert_city' %}" method="post">
+    {% csrf_token %}
+    Enter City
+    <input type="text" name="city"><br>
+    <input type="submit" name="submit" value="Submit">
+</form>
+</body>
+</html>
